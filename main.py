@@ -41,7 +41,7 @@ while poprawnosc_danych == False:
 # inflacja_rok_miesiac
 
 inflacja_1_styczen = 1.592824484
-inflacja_1_luty = -0.453509101
+inflacja_1_luty = -0.453509101,
 inflacja_1_marzec = 2.324671717
 inflacja_1_kwiecien = 1.261254407
 inflacja_1_maj = 1.782526286
@@ -64,6 +64,33 @@ inflacja_2_wrzesien = -0.07742069
 inflacja_2_pazdziernik = 1.165733399
 inflacja_2_listopad = -0.404186718
 inflacja_2_grudzien = 1.499708521
+
+inflacja = [["Rok 1, Styczen", inflacja_1_styczen],
+            ["Rok 1, Luty", inflacja_1_luty],
+            ["Rok 1, Marzec", inflacja_1_marzec],
+            ["Rok 1, Kwiecien", inflacja_1_kwiecien],
+            ["Rok 1, Maj", inflacja_1_maj],
+            ["Rok 1, Czerwiec", inflacja_1_czerwiec],
+            ["Rok 1, Lipiec", inflacja_1_lipiec],
+            ["Rok 1, Sierpien", inflacja_1_sierpien],
+            ["Rok 1, Wrzesien", inflacja_1_wrzesien],
+            ["Rok 1, Pazdziernik", inflacja_1_pazdziernik],
+            ["Rok 1, Listopad", inflacja_1_listopad],
+            ["Rok 1, Grudzien", inflacja_1_grudzien],
+            ["Rok 2, Styczen", inflacja_2_styczen],
+            ["Rok 2, Luty", inflacja_2_luty],
+            ["Rok 2, Marzec", inflacja_2_marzec],
+            ["Rok 2, Kwiecien", inflacja_2_kwiecien],
+            ["Rok 2, Maj", inflacja_2_maj],
+            ["Rok 2, Czerwiec", inflacja_2_czerwiec],
+            ["Rok 2, Lipiec", inflacja_2_lipiec],
+            ["Rok 2, Sierpien", inflacja_2_sierpien],
+            ["Rok 2, Wrzesien", inflacja_2_wrzesien],
+            ["Rok 2, Pazdziernik", inflacja_2_pazdziernik],
+            ["Rok 2, Listopad", inflacja_2_listopad],
+            ["Rok 2, Grudzien", inflacja_2_grudzien]]
+
+print(inflacja)
 
 
 print("Koniec programu")
