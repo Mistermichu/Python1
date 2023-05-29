@@ -2,12 +2,29 @@ poprawnosc_danych = False
 
 while poprawnosc_danych == False:
 
-    kredyt = input("Wprowadz kwote kredytu: ")
-    kredyt = float(kredyt)
-    oprocentowanie = input("Wprowadz wartosc oprocentowania: ")
-    oprocentowanie = float(oprocentowanie)
-    kwota_raty = input("Wprowadz stala kwote raty: ")
-    kwota_raty = float(kwota_raty)
+    kredyt = None
+    while not isinstance(kredyt, float):
+        try:
+            kredyt = input("Wprowadz kwote kredytu: ")
+            kredyt = float(kredyt)
+        except ValueError:
+            print("Podana wartosc nie jest liczba!")
+
+    oprocentowanie = None
+    while not isinstance(oprocentowanie, float):
+        try:
+            oprocentowanie = input("Wprowadz wartosc oprocentowania: ")
+            oprocentowanie = float(oprocentowanie)
+        except ValueError:
+            print("Podana wartosc nie jest liczba!")
+
+    kwota_raty = None
+    while not isinstance(kwota_raty, float):
+        try:
+            kwota_raty = input("Wprowadz stala kwote raty: ")
+            kwota_raty = float(kwota_raty)
+        except ValueError:
+            print("Podana wartosc nie jest liczba!")
 
     print("Potwierdz poprawnosc wprowadzonych danych")
     print(
