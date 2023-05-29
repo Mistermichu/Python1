@@ -41,7 +41,7 @@ while poprawnosc_danych == False:
 # inflacja_rok_miesiac
 
 inflacja_1_styczen = 1.592824484
-inflacja_1_luty = -0.453509101,
+inflacja_1_luty = -0.453509101
 inflacja_1_marzec = 2.324671717
 inflacja_1_kwiecien = 1.261254407
 inflacja_1_maj = 1.782526286
@@ -90,7 +90,15 @@ inflacja = [["Rok 1, Styczen", inflacja_1_styczen],
             ["Rok 2, Listopad", inflacja_2_listopad],
             ["Rok 2, Grudzien", inflacja_2_grudzien]]
 
-print(inflacja)
+# wzór 1 + ((inflacja + oprocentowanie / 1200 *)) * pozostala kwota kredytu - stala kwota raty
+
+pozostala_kwota_kredytu = kredyt
+for okres in inflacja:
+    if isinstance(okres[0], str):
+        print(okres[0])
+for wartosc_inflacji in inflacja:
+    if isinstance(wartosc_inflacji[1], float):
+        print(wartosc_inflacji[1])
 
 
 print("Koniec programu")
