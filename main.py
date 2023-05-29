@@ -50,7 +50,7 @@ inflacja_1_lipiec = 1.502229842
 inflacja_1_sierpien = 1.782526286
 inflacja_1_wrzesien = 2.328848994
 inflacja_1_pazdziernik = 0.616921348
-inflacja_1_listopad = 2, 352295886
+inflacja_1_listopad = 2.352295886
 inflacja_1_grudzien = 0.337779545
 inflacja_2_styczen = 1.577035247
 inflacja_2_luty = -0.292781443
@@ -93,14 +93,18 @@ inflacja = [["Rok 1, Styczen", inflacja_1_styczen],
 # wzór (1 + ((inflacja + oprocentowanie) / 1200) * pozostala kwota kredytu - stala kwota raty
 
 pozostala_kwota_kredytu = kredyt
+roznica = pozostala_kwota_kredytu - kredyt
 
 
 for okres in inflacja:
     if isinstance(okres[0], str):
         print(
-            f"{okres[0]}: Twoja pozostała kwota kredytu to {pozostala_kwota_kredytu}, to Y mniej niż w poprzednim miesiącu")
+            f"{okres[0]}: Twoja pozostała kwota kredytu to {pozostala_kwota_kredytu}, to {roznica} mniej niż w poprzednim miesiącu")
+        wartosc_1 = pozostala_kwota_kredytu
         pozostala_kwota_kredytu = (
-            1 + ((inflacja[0][1] + oprocentowanie) / 1200)) * pozostala_kwota_kredytu - kwota_raty
+            1 + (okres[1] + oprocentowanie) / 1200) * pozostala_kwota_kredytu - kwota_raty
+        wartosc_2 = pozostala_kwota_kredytu
+        roznica = wartosc_1 - wartosc_2
 
 
 print("Koniec programu")
