@@ -95,16 +95,18 @@ inflacja = [["Rok 1, Styczen", inflacja_1_styczen],
 pozostala_kwota_kredytu = kredyt
 roznica = pozostala_kwota_kredytu - kredyt
 
+print(
+    f"Twoja pozostała kwota kredytu to {pozostala_kwota_kredytu}, to {roznica} mniej niż w poprzednim miesiącu")
 
 for okres in inflacja:
     if isinstance(okres[0], str):
-        print(
-            f"{okres[0]}: Twoja pozostała kwota kredytu to {pozostala_kwota_kredytu}, to {roznica} mniej niż w poprzednim miesiącu")
         wartosc_1 = pozostala_kwota_kredytu
         pozostala_kwota_kredytu = (
             1 + (okres[1] + oprocentowanie) / 1200) * pozostala_kwota_kredytu - kwota_raty
         wartosc_2 = pozostala_kwota_kredytu
         roznica = wartosc_1 - wartosc_2
+        print(
+            f"{okres[0]}: Twoja pozostała kwota kredytu to {round(pozostala_kwota_kredytu, 2)}, to {round(roznica, 2)} mniej niż w poprzednim miesiącu")
 
 
 print("Koniec programu")
