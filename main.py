@@ -1,3 +1,2 @@
-print("Wprowadź kwotę kredytu: ")
-kredyt = input("")
+kredyt = input("Wprowadz kwote kredytu:")
 kredyt = float(kredyt)
