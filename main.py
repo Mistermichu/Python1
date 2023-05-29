@@ -1,2 +1,6 @@
 kredyt = input("Wprowadz kwote kredytu:")
 kredyt = float(kredyt)
+oprocentowanie = input("Wprowadz wartosc oprocentowania")
+oprocentowanie - float(oprocentowanie)
+kwota_raty = input("Wprowadz stala kwote raty:")
+kwota_raty = float(kwota_raty)
